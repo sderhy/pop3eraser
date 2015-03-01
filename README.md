@@ -1,5 +1,5 @@
 # pop3eraser
-I needed a simple command line programm to delete my mails from my pop3account.
+I needed a simple command line program to delete my mails from my pop3account.
 It's a very simple perl command line utility
 I wanted it to work as a vi utility, but I didn't found it so I had to program it.
 
