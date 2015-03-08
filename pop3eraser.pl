@@ -9,7 +9,6 @@
 # Libraries: 
 # sudo cpan install .. 
 	use Term::Screen;
-	use Switch; 
 	use Mail::POP3Client;
 	use MIME::Base64 ;
 	use Encode qw/encode decode/;
