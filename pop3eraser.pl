@@ -116,19 +116,14 @@ sub erase{
 # See also Term::ReadKey
 sub charnavigation(){
 	my ($scr , $c ) =  @_ ; 
-	#status($scr, "i: $i , count: $count" ) ; 
-	switch($c){
-		case('k') { 
-			$i=$i-1 ; 
-			if($i==0){  $i=1 ; }
-		} 
-		case('j') { 
-			$i++ ; 
-			if($i > $count) {  $i=$count  ;  }
-		} 
-		case('x'){
-			if($todelete[$i] eq "X") {  $todelete[$i] =''} else {  $todelete[$i]="X" ;}
-		}
+	if($c eq 'k' or $c eq "ku" ){
+		$i=$i-1 ; 
+		if($i==0){  $i=1 ; }
+	}elsif($c eq  'j' or $c eq "kd" ) { 
+		$i++ ; 
+		if($i > $count) {  $i=$count  ;  }
+	}elsif($c eq 'x'){
+		if($todelete[$i] eq "X") {  $todelete[$i] =''} else {  $todelete[$i]="X" ;}
 	}
 	displayMessage($scr, $i , 2, 0 ) ; 
 	
